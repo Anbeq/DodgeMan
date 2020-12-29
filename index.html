@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>DodgeMan</title>
+</head>
+<body>
+    <div class="gameview">
+        <header class="header">
+            <div class="scoreContainer">
+                <p>Score: 0</p> 
+            </div>
+            <p class="title">DodgeMan</p>
+            <audio src="Overworld.mp3" width="0px" height="0px" autoplay volume="0.5" class="music"></audio>
+            <input type="range" min="0" max="100" value="50" class="slider">
+            <img src="Sound-logo.svg" alt="sound symbol" class="sound-symbol">
+            <img src="heart.svg" alt="heart" class="heart">
+            <img src="heart.svg" alt="heart" class="heart">
+            <img src="heart.svg" alt="heart" class="heart">
+            <img src="restart.png" alt="restart" class="restart-button">
+        </header>
+        <div class=enemies>
+    
+        </div>
+            <div class="character"></div>
+
+        <div>
+            <button class="startButton">Start</button>
+        </div>
+        <div class="endScreen dontShow">
+            <p class="lostText">Game over</p>
+            <p>Press R to play again</p>
+            <div class="inputs">
+                <input type="text" class="input"> 
+                <button class="uploadButton"> Upload Score</button>
+            </div>
+            <div class="checkboxes dontShow">
+                <img src="Done.png" alt="checkbox" class="done">
+            </div>
+        </div>
+    </div>
+    <div class="show-scores">
+        <div class="show-scores-header"> 
+            <h2> Highscores </h2>
+        </div>
+        <div class="descriptions">
+            <div class="descriptions-rank"> Rank </div>
+            <div class="descriptions-name"> Name </div>
+            <div class="descriptions-score"> Score </div>
+        </div>
+        <div class="container"> </div>
+    </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyAVGLgAeUtWi2gJ7slmlHdthmBFdmOnn6I",
+            authDomain: "dodgeman-27b17.firebaseapp.com",
+            databaseURL: "https://dodgeman-27b17.firebaseio.com",
+            projectId: "dodgeman-27b17",
+            storageBucket: "dodgeman-27b17.appspot.com",
+            messagingSenderId: "726075064768"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
